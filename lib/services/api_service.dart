@@ -3,10 +3,14 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
 class ApiService {
-  static const String authUrl = 'http://localhost:8000';
-  static const String cardsUrl = 'http://localhost:8001';
-  static const String aiUrl = 'http://localhost:8002';
-  static const String progressUrl = 'http://localhost:8003';
+  static const String authUrl =
+      'https://linguaflash-auth-860933140672.europe-west1.run.app';
+  static const String cardsUrl =
+      'https://linguaflash-cards-860933140672.europe-west1.run.app';
+  static const String aiUrl =
+      'https://linguaflash-ai-860933140672.europe-west1.run.app';
+  static const String progressUrl =
+      'https://linguaflash-progress-860933140672.europe-west1.run.app';
 
   static Future<String?> getToken() async {
     final prefs = await SharedPreferences.getInstance();
